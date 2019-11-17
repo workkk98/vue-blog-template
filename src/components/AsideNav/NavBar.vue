@@ -1,8 +1,8 @@
 <template>
   <div class="nav-block">
-    <div class="nav-title" ref="title">{{navDataList.title}}</div>
+    <div class="nav-title" ref="title" @click="goToSomeWhere">{{navData.title}}</div>
     <nav-item 
-      v-for="(item ,index) of navDataList.list" 
+      v-for="(item ,index) of navData.list" 
       :key="index" 
       :index="index"
       :item="item"
@@ -18,6 +18,7 @@ export default {
   components: {
     NavItem: NavItem
   },
+  props: ['navData'],
   methods:{
     cancelOtherNav(playload) {
       if (this.chooseItemIndex > -1) {
@@ -27,18 +28,15 @@ export default {
         }
       }
       this.chooseItemIndex = playload.newChooseIndex
+    },
+    goToSomeWhere() {
+      if (this.navData.path) {
+        this.$router.push({ path: this.navData.path })
+      }
     }
   },
   data() {
     return {
-      navDataList: {
-        title:'组件',
-        list:[
-          { subtitle: '布局', route: 'index'},
-          { subtitle: 'table', route: 'table'},
-          { subtitle: '左侧导航栏', route: 'nav'}
-        ]
-      },
       //之前选择的item-index
       chooseItemIndex: -1
     }
@@ -49,6 +47,9 @@ export default {
 </script>
 
 <style scoped>
+  .nav-block {
+    margin-bottom: 2rem;
+  }
   .nav-title {
     font-weight: bolder;
     font-size: 18px;

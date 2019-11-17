@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import StyleTable from '../components/StyleTable'
+import StyleTable from '../../components/StyleTable/'
 export default {
   name: 'style-Table-index',
   components:{

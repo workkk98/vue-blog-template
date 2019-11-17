@@ -10,7 +10,11 @@ export default {
     activeNavBar() {
       this.classList.push('visble-line')
       this.$emit('cancel-others',{ newChooseIndex: this.index })
-      this.$router.push({ path: this.item.route })
+      if (this.item.path) {
+        if(this.$route.path !== this.item.path) {
+          this.$router.push({ path: this.item.path })
+        }
+      }
     },
     cancel() {
       this.classList = ['nav-list']

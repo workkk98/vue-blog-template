@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import AsideNav from './components/AsideNav'
+import AsideNav from './components/AsideNav/index'
 export default {
   name: 'app',
   components: {
