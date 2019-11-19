@@ -11,7 +11,8 @@ const config = [
   {
     title:'js相关',
     list:[
-      { subtitle: 'promise'}
+      { subtitle: 'promise'},
+      { subtitle: 'generator', path: '/js/generator'}
     ]
   },
   {
