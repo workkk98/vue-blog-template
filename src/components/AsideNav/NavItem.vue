@@ -9,7 +9,6 @@ export default {
   methods: {
     activeNavBar() {
       this.classList.push('visble-line')
-      this.$emit('cancel-others',{ newChooseIndex: this.index })
       if (this.item.path) {
         if(this.$route.path !== this.item.path) {
           this.$router.push({ path: this.item.path })
@@ -23,6 +22,15 @@ export default {
   data() {
     return {
       classList:[ 'nav-list']
+    }
+  },
+  watch: {
+    $route (to) {
+      if( to.path !== this.item.path ) {
+        if( this.classList.length >1 ) {
+          this.cancel()
+        }
+      }
     }
   },
   created() {

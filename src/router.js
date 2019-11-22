@@ -4,6 +4,7 @@ import index from './views'
 import generatorView from './views/js/generator'
 import styleTable from './views/components/table'
 import layoutCom from  './views/components/layout'
+import initDataView from './views/vue/InitData'
 
 Vue.use(VueRouter)
 
@@ -18,6 +19,11 @@ export default new VueRouter({
     {
       path: '/js/generator',
       component: generatorView
+    },
+    //vu相关
+    {
+      path: '/vue/initData',
+      component: initDataView
     },
     //components相关
     {

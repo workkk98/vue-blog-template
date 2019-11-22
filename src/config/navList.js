@@ -11,8 +11,13 @@ const config = [
   {
     title:'js相关',
     list:[
-      { subtitle: 'promise'},
       { subtitle: 'generator', path: '/js/generator'}
+    ]
+  },
+  {
+    title:'vue相关',
+    list:[
+      { subtitle: '简单讲讲initData()', path: '/vue/initData'}
     ]
   },
   {

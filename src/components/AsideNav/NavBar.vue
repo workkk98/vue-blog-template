@@ -6,7 +6,6 @@
       :key="index" 
       :index="index"
       :item="item"
-      @cancel-others="cancelOtherNav" 
       ref="nav-item"></nav-item>
   </div>
 </template>
@@ -20,15 +19,6 @@ export default {
   },
   props: ['navData'],
   methods:{
-    cancelOtherNav(playload) {
-      if (this.chooseItemIndex > -1) {
-        // 得是上次选中的 和 本次新选中得 dom不同才能取消
-        if(this.chooseItemIndex !== playload.newChooseIndex) {
-        this.$refs['nav-item'][this.chooseItemIndex].cancel()
-        }
-      }
-      this.chooseItemIndex = playload.newChooseIndex
-    },
     goToSomeWhere() {
       if (this.navData.path) {
         this.$router.push({ path: this.navData.path })

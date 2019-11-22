@@ -1,8 +1,8 @@
-# style components
+# xiaofan's study blog aka：xf slog
 
 ---------
 
-一些灵感来自与工作
+一些摘记来自与日常学习和工作
 
 **组件列表**
 * table
