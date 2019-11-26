@@ -15,7 +15,7 @@
        先贴一张官方的依赖收集图片 "data-touch"，在你阅读完这片小文章后<br>
        希望你能对这张图有个大概对了解,另外建议配合源码食用
      </div>
-     <img src="../../assets/data.png" alt="">
+     <img src="@/assets/data.png" alt="">
    </div>
    <subtitle :subtitle="subtitle2"></subtitle>
    <div>
@@ -53,7 +53,7 @@
       下面就是关键了，注入defineReactive的两个形参先记下一份是obj也就是value，一个是key <br>
       函数第一个语句 就是 <strong>const dep = new Dep()</strong> 你可以看下上面也有个dep，这里先不解释 <br>
       略过一些代码，往下看，就到了Object.difineProperty() <br>
-      <img src="../../assets/data_get.png" alt="">
+      <img src="@/assets/data_get.png" alt="">
       <div>
         注意这一行代码 let childOb = !shallow && observe(val) <br>
         如果这个key对应的val是个对象，那么childOb就会指向这个val的__ob__ <br>
@@ -65,7 +65,7 @@
         有个dep，因为165行中的dep你是触碰不到的，但这个dep你是可以手动获取到的 <br>
         这也是$set()的核心 <br>
       </div>
-      <img src="../../assets/data_set.png" alt="">
+      <img src="@/assets/data_set.png" alt="">
       <div>
         set就相对简单了，但是我们得分情况而定 <br>
         1. newVal 是基础类型，则会释放childOb <br>
@@ -81,8 +81,8 @@
  </div>
 </template>
 <script>
-import MainTitle from '../../components/common/MainViewTitle'
-import Subtitle from '../../components/common/Subtitle'
+import MainTitle from '@/components/common/MainViewTitle'
+import Subtitle from '@/components/common/Subtitle'
 export default {
   name:'init-data',
   components:{
@@ -100,9 +100,10 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
+$fixedSize: 75%;
   img {
-    width: 75%;
+    width: $fixedSize;
     height: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;

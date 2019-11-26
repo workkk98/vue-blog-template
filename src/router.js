@@ -5,6 +5,7 @@ import generatorView from './views/js/generator'
 import styleTable from './views/components/table'
 import layoutCom from  './views/components/layout'
 import initDataView from './views/vue/InitData'
+import ComputedWatchView from './views/vue/ComputedWatch'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,10 @@ export default new VueRouter({
     {
       path: '/vue/initData',
       component: initDataView
+    },
+    {
+      path: '/vue/computedwatch',
+      component: ComputedWatchView
     },
     //components相关
     {
