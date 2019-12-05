@@ -5,10 +5,10 @@
 </template>
 <script>
 export default {
-  name:'subtitle',
-  props:['subtitle']
+  name: 'subtitle',
+  props: ['subtitle']
 }
 </script>
 <style scoped>
- 
+
 </style>

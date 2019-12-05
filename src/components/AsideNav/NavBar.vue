@@ -1,9 +1,9 @@
 <template>
   <div class="nav-block">
     <div class="nav-title" ref="title" @click="goToSomeWhere">{{navData.title}}</div>
-    <nav-item 
-      v-for="(item ,index) of navData.list" 
-      :key="index" 
+    <nav-item
+      v-for="(item ,index) of navData.list"
+      :key="index"
       :index="index"
       :item="item"
       ref="nav-item"></nav-item>
@@ -18,20 +18,20 @@ export default {
     NavItem: NavItem
   },
   props: ['navData'],
-  methods:{
-    goToSomeWhere() {
+  methods: {
+    goToSomeWhere () {
       if (this.navData.path) {
         this.$router.push({ path: this.navData.path })
       }
     }
   },
-  data() {
+  data () {
     return {
-      //之前选择的item-index
+      // 之前选择的item-index
       chooseItemIndex: -1
     }
   },
-  mounted() {
+  mounted () {
   }
 }
 </script>

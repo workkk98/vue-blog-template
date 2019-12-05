@@ -9,8 +9,8 @@
 </template>
 <script>
 export default {
-  name:'code-box',
-  props:['code']
+  name: 'code-box',
+  props: ['code']
 }
 </script>
 <style scoped>

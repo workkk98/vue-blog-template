@@ -22,9 +22,9 @@
 
 <script>
 export default {
-  name:'style-table',
-  props:['tableHeader', 'tableData', 'openDefault', 'openDIY'],
-  data() {
+  name: 'style-table',
+  props: ['tableHeader', 'tableData', 'openDefault', 'openDIY'],
+  data () {
     return {
       Default: this.openDefault,
       DIY: this.openDIY

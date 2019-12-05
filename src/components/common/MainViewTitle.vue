@@ -5,8 +5,8 @@
 </template>
 <script>
 export default {
-  name:'main-view-title',
-  props:['mainTitle']
+  name: 'main-view-title',
+  props: ['mainTitle']
 }
 </script>
 <style scoped>

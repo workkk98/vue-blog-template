@@ -7,13 +7,13 @@
 <script>
 export default {
   name: 'table-col',
-  props:['prop', 'row'],
-  data() {
+  props: ['prop', 'row'],
+  data () {
     console.log(this.row)
     return {}
   },
-  computed:{
-    celldata() {
+  computed: {
+    celldata () {
       return this.prop
     }
   }

@@ -7,10 +7,10 @@
   <div class="script-style">
     这类函数声明主要和普通函数的区别在于 * 和 yield 关键词 <br>
     例如: <br>
-    <code-box :code="code1"></code-box> 
+    <code-box :code="code1"></code-box>
     然后调用这个函数并不会执行函数内的代码，而是返回一个迭代器对象（这一点可以与iterator接口挂钩）<br>
     例如:  <br>
-    <code-box :code="code2"></code-box> 
+    <code-box :code="code2"></code-box>
   </div>
   <subtitle :subtitle="subtitle2"></subtitle>
   <div class="script-style">
@@ -36,7 +36,7 @@ import MainTitle from '../../components/common/MainViewTitle'
 import Subtitle from '../../components/common/Subtitle'
 import CodeBox from '../../components/common/CodeBox'
 export default {
-  name:'js-generator',
+  name: 'js-generator',
   data () {
     return {
       mainTitle: 'generator',
@@ -48,7 +48,7 @@ export default {
       ' let b = yield 20; \n ' +
       ' return a \n ' +
       '} ',
-      code2: 'let iterator = name() \n console.log(iterator.next()) // 10 \n ' + 
+      code2: 'let iterator = name() \n console.log(iterator.next()) // 10 \n ' +
       'console.log(iterator.next(15)) // 20 \n console.log(iterator.next()) //可以自己在浏览器控制台打印下\n ' +
       '然后整个 iterator.next() 返回的对象是这样的 { value: yield右边的值, done: 是否到最后一步} \n' +
       ' 但最关键的是，Generator 函数从暂停状态到恢复运行，它的上下文状态（context）是不变的',
@@ -77,7 +77,7 @@ export default {
         '}'
     }
   },
-  components:{
+  components: {
     MainTitle: MainTitle,
     Subtitle: Subtitle,
     CodeBox
@@ -92,4 +92,3 @@ export default {
     line-height: 2rem;
   }
 </style>
-

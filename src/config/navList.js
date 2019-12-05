@@ -4,31 +4,30 @@
 
 const config = [
   {
-    title:'介绍',
+    title: '介绍',
     path: '/',
     list: []
   },
   {
-    title:'js相关',
-    list:[
-      { subtitle: 'generator', path: '/js/generator'}
+    title: 'js相关',
+    list: [
+      { subtitle: 'generator', path: '/js/generator' }
     ]
   },
   {
-    title:'vue相关',
-    list:[
-      { subtitle: '简单讲讲initData()', path: '/vue/initData'},
-      { subtitle: 'computed和watch', path: '/vue/computedwatch'}
+    title: 'vue相关',
+    list: [
+      { subtitle: '简单讲讲initData()', path: '/vue/initData' },
+      { subtitle: 'computed和watch', path: '/vue/computedwatch' }
     ]
   },
   {
-    title:'组件',
-    list:[
-      { subtitle: '整体布局', path: '/components/layout'},
-      { subtitle: 'table', path: '/table'}
+    title: '组件',
+    list: [
+      { subtitle: '整体布局', path: '/components/layout' },
+      { subtitle: 'table', path: '/table' }
     ]
   }
 ]
-
 
 export default config

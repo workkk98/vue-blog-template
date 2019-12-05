@@ -49,7 +49,7 @@
     <subtitle :subtitle="subtitle3"></subtitle>
     <div>
       相对来说，watch会比computed来得简单些。先贴initWatch() <br>
-      他是最后调用的，在initData()和initComputed()之后 <br> 
+      他是最后调用的，在initData()和initComputed()之后 <br>
       他就主要做了一件事，生成user watcher
     </div>
     <div>
@@ -77,7 +77,7 @@
 import MainTitle from '@/components/common/MainViewTitle'
 import Subtitle from '@/components/common/Subtitle'
 export default {
-  name:'computed-watch',
+  name: 'computed-watch',
   components: {
     MainTitle,
     Subtitle

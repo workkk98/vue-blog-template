@@ -18,7 +18,7 @@
 <script>
 export default {
   name: 'layout-component',
-  data() {
+  data () {
     return {
       afterTitle: '我可以先强调这个网站页面视图方面目前只用纯css，但后期会考虑引入一些预处理器以及好玩的视图框架（因为我没ui哈哈哈）,下面是一些计划清单',
       content: ''

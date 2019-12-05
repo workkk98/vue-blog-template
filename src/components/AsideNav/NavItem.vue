@@ -7,37 +7,36 @@ export default {
   name: 'nav-item',
   props: ['item', 'index'],
   methods: {
-    activeNavBar() {
+    activeNavBar () {
       this.classList.push('visble-line')
       if (this.item.path) {
-        if(this.$route.path !== this.item.path) {
+        if (this.$route.path !== this.item.path) {
           this.$router.push({ path: this.item.path })
         }
       }
     },
-    cancel() {
+    cancel () {
       this.classList = ['nav-list']
     }
   },
-  data() {
+  data () {
     return {
-      classList:[ 'nav-list']
+      classList: ['nav-list']
     }
   },
   watch: {
     $route (to) {
-      if( to.path !== this.item.path ) {
-        if( this.classList.length >1 ) {
+      if (to.path !== this.item.path) {
+        if (this.classList.length > 1) {
           this.cancel()
         }
       }
     }
   },
-  created() {
+  created () {
   }
 }
 </script>
-
 
 <style scoped>
   .nav-list {

@@ -84,8 +84,8 @@
 import MainTitle from '@/components/common/MainViewTitle'
 import Subtitle from '@/components/common/Subtitle'
 export default {
-  name:'init-data',
-  components:{
+  name: 'init-data',
+  components: {
     MainTitle,
     Subtitle
   },
