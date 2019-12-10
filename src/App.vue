@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    <div class="project-container">
+    <div :class="{ 'project-container-mobile': isMobile}">
       <aside>
-        <div class="left">
-          <AsideNav></AsideNav>
-        </div>
+        <transition name="left">
+          <div class="left" v-if="defaultStatusInDevice">
+            <AsideNav></AsideNav>
+          </div>
+        </transition>
       </aside>
       <main>
         <div class="right">
+          <div @click="openOrCloseLeft" v-if="isMobile">to open left</div>
           <router-view></router-view>
         </div>
       </main>
@@ -17,15 +20,36 @@
 
 <script>
 import AsideNav from './components/AsideNav/index'
+import resizeHandler from './mixin/ResizeHandler'
 export default {
   name: 'app',
   components: {
     AsideNav: AsideNav
+  },
+  mixins: [resizeHandler],
+  computed: {
+    isMobile () {
+      return this.$store.state.device.device === 'mobile'
+    },
+    //  桌面默认显示，移动端默认关闭
+    defaultStatusInDevice () {
+      if (this.$store.state.device.device === 'desktop') {
+        return true
+      } else {
+        console.log(this.$store.state.device.leftStatus)
+        return this.$store.state.device.leftStatus
+      }
+    }
+  },
+  methods: {
+    openOrCloseLeft () {
+      this.$store.dispatch('device/openOrCloseLeft')
+    }
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 body {
   font-size: 16px;
   margin: 0px;
@@ -36,8 +60,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-.project-container {
-  position: relative;
+.project-container-mobile {
+  .right {
+    width: 100%;
+    margin-left: 0px;
+  }
 }
 .left {
   position: fixed;
@@ -53,5 +80,11 @@ body {
   margin-left: 20rem;
   width: auto;
   padding: 2rem 6rem;
+}
+.left-enter,.left-leave-to {
+  width: 0rem;
+}
+.left-enter-active,.left-leave-active {
+  transition: width 0.5s;
 }
 </style>

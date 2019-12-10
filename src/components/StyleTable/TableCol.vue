@@ -9,7 +9,6 @@ export default {
   name: 'table-col',
   props: ['prop', 'row'],
   data () {
-    console.log(this.row)
     return {}
   },
   computed: {

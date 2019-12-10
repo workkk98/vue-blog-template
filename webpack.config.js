@@ -1,5 +1,6 @@
 module.exports = {
   // ... 其它选项
+  // 编译时eslint检查欠缺
   module: {
     rules: [
       {
