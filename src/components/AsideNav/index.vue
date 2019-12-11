@@ -23,6 +23,7 @@ export default {
 
 <style scoped>
   .nav-container {
+    width: 200px;
     height: 100vh;
   }
   .nav-box {
