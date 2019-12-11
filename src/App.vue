@@ -11,7 +11,11 @@
       </aside>
       <main>
         <div class="right">
-          <div @click="openOrCloseLeft" v-if="isMobile">to open left</div>
+          <div v-if="isMobile">
+            <span @click="openOrCloseLeft">
+              <icon-svg svgId="icon-test"></icon-svg>点我打开侧边栏
+            </span>
+          </div>
           <router-view></router-view>
         </div>
       </main>
