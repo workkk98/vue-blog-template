@@ -54,10 +54,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-body {
-  font-size: 16px;
-  margin: 0px;
-}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
