@@ -19,7 +19,7 @@ export default {
   name: 'layout-component',
   data () {
     return {
-      afterTitle: '因为这是我的个人博客，所以我决定整个bolg使用的技术就是html+css+vue.js',
+      afterTitle: '因为我想在这个博客里练习一些基础的东西，所以我决定整个bolg使用的技术就是html+css+vue.js，不使用其他的组件框架等',
       content: '',
       productStructure: '网站结构'
     }

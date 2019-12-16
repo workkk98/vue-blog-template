@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import index from './views'
-import generatorView from './views/js/generator'
-import styleTable from './views/components/table'
-import layoutCom from './views/components/layout'
-import initDataView from './views/vue/InitData'
-import ComputedWatchView from './views/vue/ComputedWatch'
+const index = () => import('./views')
+const generatorView = () => import('./views/js/generator')
+const styleTable = () => import('./views/components/table')
+const layoutCom = () => import('./views/components/layout')
+const initDataView = () => import('./views/vue/InitData')
+const ComputedWatchView = () => import('./views/vue/ComputedWatch')
 
 Vue.use(VueRouter)
 

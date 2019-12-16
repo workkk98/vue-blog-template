@@ -25,6 +25,7 @@ export default {
 }
 a:link {
   text-decoration: none;
+  color: #2c3e50;
 }
 a:visited {
   text-decoration: none;

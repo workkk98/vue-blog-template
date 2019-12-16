@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lintlocal": "eslint -c ./.eslintrc.js --fix --ext .js,.vue src"
+    "lintlocal": "eslint -c ./.eslintrc.js --fix --ext .js,.vue src",
+    "report": "vue-cli-service build --report"
   },
   "dependencies": {
     "core-js": "^3.3.2",
@@ -15,6 +16,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-eslint": "^4.0.0",
     "@vue/cli-service": "^4.0.0",
