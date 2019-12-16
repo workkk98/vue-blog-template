@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-const index = () => import('./views')
-const generatorView = () => import('./views/js/generator')
-const styleTable = () => import('./views/components/table')
-const layoutCom = () => import('./views/components/layout')
-const initDataView = () => import('./views/vue/InitData')
-const ComputedWatchView = () => import('./views/vue/ComputedWatch')
+const index = () => import(/* webpackChunkName: "group-views" */ './views')
+const generatorView = () => import(/* webpackChunkName: "group-views" */ './views/js/generator')
+const styleTable = () => import(/* webpackChunkName: "group-views" */ './views/components/table')
+const layoutCom = () => import(/* webpackChunkName: "group-views" */ './views/components/layout')
+const initDataView = () => import(/* webpackChunkName: "group-views" */ './views/vue/InitData')
+const ComputedWatchView = () => import(/* webpackChunkName: "group-views" */ './views/vue/ComputedWatch')
 
 Vue.use(VueRouter)
 

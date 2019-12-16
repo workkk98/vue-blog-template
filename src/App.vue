@@ -16,7 +16,9 @@
               <icon-svg svgId="icon-test"></icon-svg>点我打开侧边栏
             </span>
           </div>
-          <router-view></router-view>
+          <keep-alive>
+            <router-view></router-view>
+          </keep-alive>
         </div>
       </main>
     </div>
