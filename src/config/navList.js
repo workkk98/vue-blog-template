@@ -18,7 +18,8 @@ const config = [
     title: 'vue相关',
     list: [
       { subtitle: '简单讲讲initData()', path: '/vue/initData' },
-      { subtitle: 'computed和watch', path: '/vue/computedwatch' }
+      { subtitle: 'computed和watch', path: '/vue/computedwatch' },
+      { subtitle: 'vue-router的小技巧', path: '/vue/vue-router' }
     ]
   },
   {

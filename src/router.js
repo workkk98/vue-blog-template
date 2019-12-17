@@ -6,6 +6,7 @@ const styleTable = () => import(/* webpackChunkName: "group-views" */ './views/c
 const layoutCom = () => import(/* webpackChunkName: "group-views" */ './views/components/layout')
 const initDataView = () => import(/* webpackChunkName: "group-views" */ './views/vue/InitData')
 const ComputedWatchView = () => import(/* webpackChunkName: "group-views" */ './views/vue/ComputedWatch')
+const VueRouterView = () => import(/* webpackChunkName: "group-views" */ './views/vue/VueRouter')
 
 Vue.use(VueRouter)
 
@@ -29,6 +30,10 @@ export default new VueRouter({
     {
       path: '/vue/computedwatch',
       component: ComputedWatchView
+    },
+    {
+      path: '/vue/vue-router',
+      component: VueRouterView
     },
     // components相关
     {

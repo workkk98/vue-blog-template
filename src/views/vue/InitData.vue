@@ -1,6 +1,6 @@
 <template>
  <div>
-   <main-title :mainTitle="mainTitle"></main-title>
+   <main-view-title :mainTitle="mainTitle"></main-view-title>
    <subtitle :subtitle="subtitle1"></subtitle>
    <div>
      反正刚开始想了解源码的时候，js基础很差，对一些es6的语法还不怎么掌握<br>
@@ -81,14 +81,8 @@
  </div>
 </template>
 <script>
-import MainTitle from '@/components/common/MainViewTitle'
-import Subtitle from '@/components/common/Subtitle'
 export default {
   name: 'init-data',
-  components: {
-    MainTitle,
-    Subtitle
-  },
   data () {
     return {
       mainTitle: '简单讲讲initData',

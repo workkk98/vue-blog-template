@@ -6,7 +6,15 @@
 
 **组件列表**
 * table
+* 整体布局
+  
+**js相关**
+* generator
 
+**vue相关**
+* initData()
+* computed和watched
+* vue-router
 
 ## Project setup
 ```

@@ -1,6 +1,6 @@
 <template>
  <div>
-   <main-title :main-title="mainTitle"></main-title>
+   <main-view-title :main-title="mainTitle"></main-view-title>
     <subtitle :subtitle="subtitle1"></subtitle>
     <div>
       这两个选项配置，都是用于监听各个属性的变化，而后执行callback <br>
@@ -74,14 +74,8 @@
  </div>
 </template>
 <script>
-import MainTitle from '@/components/common/MainViewTitle'
-import Subtitle from '@/components/common/Subtitle'
 export default {
   name: 'computed-watch',
-  components: {
-    MainTitle,
-    Subtitle
-  },
   data () {
     return {
       mainTitle: 'computed和watch',

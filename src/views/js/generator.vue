@@ -1,6 +1,6 @@
 <template>
  <div>
-  <main-title :mainTitle="mainTitle"></main-title>
+  <main-view-title :mainTitle="mainTitle"></main-view-title>
   <div>promise十分美丽，但是毫无疑问，链式调用promise仍然不是非常美观。</div>
   <div>generator函数和后面出现的async函数无疑是解决这个问题的好办法</div>
   <subtitle :subtitle="subtitle1"></subtitle>
@@ -32,8 +32,6 @@
  </div>
 </template>
 <script>
-import MainTitle from '../../components/common/MainViewTitle'
-import Subtitle from '../../components/common/Subtitle'
 import CodeBox from '../../components/common/CodeBox'
 export default {
   name: 'js-generator',
@@ -78,8 +76,6 @@ export default {
     }
   },
   components: {
-    MainTitle: MainTitle,
-    Subtitle: Subtitle,
     CodeBox
   }
 }
