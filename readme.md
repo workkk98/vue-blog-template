@@ -16,7 +16,7 @@
 * computed和watched
 * vue-router
 
-//need to write about command
+//need to write about command!!!
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

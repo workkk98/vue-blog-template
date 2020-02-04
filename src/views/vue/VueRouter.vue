@@ -3,7 +3,7 @@
    <main-view-title :mainTitle="mainTitle"></main-view-title>
    <subtitle :subtitle="subtitle"></subtitle>
    <div>
-     整个hooks的触发过程在vue-router官网中介绍的很清楚 <a href="#vue/initData">传送门</a>
+     整个hooks的触发过程在vue-router官网中介绍的很清楚
      <br>
      但是我想讲些不同的
      你可以认为在调用$router.push()的过程中，实际上有两个队列按照先后顺序依次出队
@@ -38,7 +38,8 @@
     自动会执行的cbs数组
    </div>
     <div>
-      有些地方可能词不达意，敬请谅解。最好的方法还是自己去反复的看源码。这是我自己的一些理解 <a href="">传送门</a>
+      有些地方可能词不达意，敬请谅解。最好的方法还是自己去反复的看源码。这是我自己的一些理解
+      <a-link :link="'https://github.com/workINgithub/web_study/blob/master/vue/vue-router%E8%A7%A3%E6%9E%90.md'" />
     </div>
  </div>
 </template>
