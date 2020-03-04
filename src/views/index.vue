@@ -6,7 +6,7 @@
       此外，因为我觉得这个笔记并非解释整个知识点的过程用途等，我只会提及我觉得比较重要的点
     </div>
     <div>
-      <p>可能会有很多地方有问题，也希望能指出，我的邮箱是 15990127563@163.com</p>
+      <p>可能会有很多地方有问题，也希望能指出，我的邮箱是 gentlebob1998@icloud.com</p>
       <p><a target="_blank" href="https://github.com/workINgithub"><icon-svg svgId="icon-test1"></icon-svg>github地址</a></p>
     </div>
     <p></p>
