@@ -26,7 +26,8 @@ const config = [
     title: '组件',
     list: [
       { subtitle: '整体布局', path: '/components/layout' },
-      { subtitle: 'table', path: '/table' }
+      { subtitle: 'table', path: '/components/table' },
+      { subtitle: 'markdown', path: '/components/markdown' }
     ]
   }
 ]

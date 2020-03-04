@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import store from './store/index'
 const index = () => import(/* webpackChunkName: "group-views" */ './views')
 const generatorView = () => import(/* webpackChunkName: "group-views" */ './views/js/generator')
 const styleTable = () => import(/* webpackChunkName: "group-views" */ './views/components/table')
@@ -7,10 +8,11 @@ const layoutCom = () => import(/* webpackChunkName: "group-views" */ './views/co
 const initDataView = () => import(/* webpackChunkName: "group-views" */ './views/vue/InitData')
 const ComputedWatchView = () => import(/* webpackChunkName: "group-views" */ './views/vue/ComputedWatch')
 const VueRouterView = () => import(/* webpackChunkName: "group-views" */ './views/vue/VueRouter')
+const MarkdownView = () => import(/* webpackChunkName: "group-views" */ './views/components/markdown')
 
 Vue.use(VueRouter)
 
-export default new VueRouter({
+const router = new VueRouter({
   routes: [
     {
       path: '/',
@@ -41,9 +43,20 @@ export default new VueRouter({
       component: layoutCom
     },
     {
-      path: '/table',
+      path: '/components/table',
       component: styleTable,
       name: 'styleTable'
+    },
+    {
+      path: '/components/markdown',
+      component: MarkdownView
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  console.log(store)
+  next()
+})
+
+export default router

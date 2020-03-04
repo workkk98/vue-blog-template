@@ -13,6 +13,10 @@ module.exports = {
           path.resolve(__dirname, 'node_modules/'),
           path.resolve(__dirname, 'src/plugins/icons')
         ]
+      },
+      {
+        test: /\.(md|markdown)$/,
+        use: ['html-loader', 'markdown-loader']
       }
     ]
   }

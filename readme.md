@@ -16,7 +16,19 @@
 * computed和watched
 * vue-router
 
-//need to write about command!!!
+#### 侧边栏导航组件
+
+通过更新config文件夹中的navList.js文件，修改侧边栏内容
+例如
+```
+  {
+    title: '标题',
+    path: '',
+    list: [
+      { subtitle: '副标题', path: '对应url地址' }
+    ]
+  }
+```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
