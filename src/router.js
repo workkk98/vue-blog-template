@@ -15,6 +15,9 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  if (from.path === to.path) {
+    next(false)
+  }
   next()
 })
 

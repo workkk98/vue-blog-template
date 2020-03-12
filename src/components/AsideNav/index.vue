@@ -7,7 +7,7 @@
 <script>
 // todo: 解决组件问题
 import NavBar from './NavBar'
-import navList from '../../config/navList'
+import navList from '@/nav/navList'
 export default {
   name: 'aside-nav',
   components: {

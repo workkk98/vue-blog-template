@@ -3,11 +3,11 @@ const markdownsComponent = {
   index: function () {
     return import('@/markdowns/index.md')
   },
-  componentsMarkdown: function () {
-    return import('@/markdowns/components/markdown.md')
+  introduceMarkdown: function () {
+    return import('@/markdowns/introduce/markdown.md')
   },
-  default () {
-    return import('@/markdowns/default.md')
+  notFound () {
+    return import('@/markdowns/404.md')
   }
 }
 const components = Object.keys(markdownsComponent)
@@ -32,6 +32,6 @@ export default {
   getComponent (path) {
     // path匹配对应的markdown组件
     const formatPath = getComponentName(path)
-    return components.indexOf(formatPath) > -1 ? markdownsComponent[formatPath]() : markdownsComponent.default()
+    return components.indexOf(formatPath) > -1 ? markdownsComponent[formatPath]() : markdownsComponent.notFound()
   }
 }

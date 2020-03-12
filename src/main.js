@@ -9,6 +9,9 @@ import MainViewTitle from './components/common/MainViewTitle'
 import Subtitle from './components/common/Subtitle'
 import Link from './components/common/Link'
 
+// 全局样式
+import '@/styles/index.scss'
+
 Vue.config.productionTip = false
 
 // 注册全局组件
