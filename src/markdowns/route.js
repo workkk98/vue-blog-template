@@ -3,8 +3,14 @@ const markdownsComponent = {
   index: function () {
     return import('@/markdowns/index.md')
   },
+  introduceIndex: function () {
+    return import('@/markdowns/introduce/index.md')
+  },
   introduceMarkdown: function () {
     return import('@/markdowns/introduce/markdown.md')
+  },
+  introduceGuide: function () {
+    return import('@/markdowns/introduce/guide.md')
   },
   notFound () {
     return import('@/markdowns/404.md')

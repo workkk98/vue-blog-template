@@ -1,5 +1,15 @@
-@use 'markdown';
+$white: #FFF;
+$defaultPreBgColor: #282c34;
 
 body {
   margin: 0px;
+}
+
+pre {
+  background-color: $defaultPreBgColor;
+  border-radius: 6px;
+  padding: 10px 0px;
+  code {
+    color: $white;
+  }
 }
