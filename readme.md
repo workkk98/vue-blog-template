@@ -7,7 +7,6 @@
 **所以，vue-blog-template诞生了**🎉🎉🎉
 
 
-
 #### 侧边栏导航组件
 
 通过更新config文件夹中的navList.js文件，修改侧边栏内容
@@ -22,3 +21,9 @@
   }
 ```
 
+#### plan
+
+1. 整理下项目内容，不需要的东西可以移除了
+2. 完善README.md(也相当于完善项目介绍的那个markdown)
+3. 整一下scss  @ues问题 这肯定和webpack脱不了关系
+4. 写一个loader? highlight.js 和 markdown.js
