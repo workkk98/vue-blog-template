@@ -12,6 +12,9 @@ import Link from './components/common/Link'
 // 全局样式
 import '@/styles/index.scss'
 
+import hljs from 'highlight.js'
+Vue.prototype.$hljs = hljs
+
 Vue.config.productionTip = false
 
 // 注册全局组件

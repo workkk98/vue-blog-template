@@ -19,6 +19,11 @@ export default {
       if (vue.markdown === '') {
         mdRoute.getComponent(to.path).then((md) => {
           vue.markdown = md.default
+          vue.$nextTick(() => {
+            document.querySelectorAll('pre code').forEach((ele) => {
+              vue.$hljs.highlightBlock(ele)
+            })
+          })
         })
       }
     })
@@ -26,6 +31,11 @@ export default {
   beforeRouteUpdate (to, from, next) {
     mdRoute.getComponent(to.path).then((md) => {
       this.markdown = md.default
+      this.$nextTick(() => {
+        document.querySelectorAll('pre code').forEach((ele) => {
+          this.$hljs.highlightBlock(ele)
+        })
+      })
     })
     next()
   }

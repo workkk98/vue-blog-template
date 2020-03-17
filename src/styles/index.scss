@@ -1,15 +1,14 @@
 $white: #FFF;
 $defaultPreBgColor: #282c34;
+@import 'atom-one-dark.scss';
 
 body {
   margin: 0px;
 }
 
-pre {
-  background-color: $defaultPreBgColor;
-  border-radius: 6px;
-  padding: 10px 0px;
+pre{
   code {
-    color: $white;
+    border-width: 6px;
+    border-radius: 6px;
   }
 }

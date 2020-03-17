@@ -17,6 +17,14 @@ module.exports = {
       {
         test: /\.(md|markdown)$/,
         use: ['html-loader', 'markdown-loader']
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   }
