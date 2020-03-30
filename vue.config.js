@@ -3,7 +3,7 @@ const configWebpack = require('./webpack.config')
 module.exports = {
   // 部署应用包时的基本URL。
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/xiaofanslog/'
+    ? '/vue-blog-template/'
     : '/',
   // 输出文件夹 默认dist
   outputDir: 'docs',
