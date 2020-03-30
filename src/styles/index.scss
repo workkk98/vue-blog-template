@@ -1,6 +1,8 @@
 $white: #FFF;
 $defaultPreBgColor: #282c34;
-@import 'atom-one-dark.scss';
+// 默认的前景色color颜色
+$defaultGlobalColor: #2c3e50;
+@import url('atom-one-dark.scss');
 
 body {
   margin: 0px;
@@ -10,5 +12,16 @@ pre{
   code {
     border-width: 6px;
     border-radius: 6px;
+  }
+}
+
+a {
+  font-weight: bold;
+  &:link {
+    color: $defaultGlobalColor;
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
   }
 }
